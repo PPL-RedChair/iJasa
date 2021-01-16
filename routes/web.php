@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\LogistikController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +20,15 @@ Route::get('/', function () {
 });
 
 Route::get('/lihatbencana', function () {
-    return "yee";
+    return "lihat bencana";
+});
+
+Route::get('/donasi', function () {
+    return "donasi";
 });
 
 Route::get('/catatpengungsi', [LogistikController::class, 'create'])->name('logistik-create');
 Route::post('/catatpengungsi', [LogistikController::class, 'store'])->name('logistik-store');
+
+Route::get('/rencanadonasi', [DonasiController::class, 'create'])->name('donasi-create');
+Route::post('rencanadonasi', [DonasiController::class, 'store'])->name('donasi-store');

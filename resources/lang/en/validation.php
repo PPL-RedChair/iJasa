@@ -131,9 +131,38 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'dropdownbencana' => [
+            'required' => 'Anda harus memilih bencana',
         ],
+        'jumlah_pengungsi' => [
+            'required' => 'Anda harus memasukkan jumlah pengungsi',
+        ],
+        'banyak_selimut' => [
+            'required' => 'Anda harus memasukkan kebutuhan logistik',
+        ],
+        'banyak_beras' => [
+            'required' => 'Anda harus memasukkan kebutuhan logistik',
+            'numeric' => 'Anda harus memasukkan banyak donasi dengan digit angka',
+        ],
+        'banyak_masker' => [
+            'required' => 'Anda harus memasukkan kebutuhan logistik',
+        ],
+        'banyak_gandum' => [
+            'required' => 'Anda harus memasukkan kebutuhan logistik',
+        ],
+        'banyak_mie' => [
+            'required' => 'Anda harus memasukkan kebutuhan logistik',
+        ],
+        'banyak_kasur' => [
+            'required' => 'Anda harus memasukkan kebutuhan logistik',
+        ],
+        'banyak_uang' => [
+            'numeric' => 'Anda harus memasukkan banyak donasi dengan digit angka',
+        ],
+        'banyak_pakaian_bekas' => [
+            'required' => 'Anda harus memasukkan setidaknya satu rencana donasi',
+            'numeric' => 'Anda harus memasukkan banyak donasi dengan digit angka',
+        ]
     ],
 
     /*

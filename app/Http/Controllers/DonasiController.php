@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Bencana;
-use App\Models\Logistik;
+use App\Models\Donasi;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use function PHPUnit\Framework\isNull;
+use Illuminate\Routing\Redirector;
 
-class LogistikController extends Controller
+class DonasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,39 +30,33 @@ class LogistikController extends Controller
      */
     public function create()
     {
-        $bencana = Bencana::all();
-        return view('logistik.create', compact('bencana'));
+        return view('donasi.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @return string
+     * @param  \Illuminate\Http\Request  $request
+     * @return Application|RedirectResponse|Response|Redirector
      */
     public function store(Request $request)
     {
         $request->validate([
-            'dropdownbencana' => 'required',
-            'jumlah_pengungsi' => 'required',
-            'banyak_selimut' => 'required',
-            'banyak_beras' => 'required',
-            'banyak_masker' => 'required',
-            'banyak_gandum' => 'required',
-            'banyak_mie' => 'required',
-            'banyak_kasur' => 'required',
+            'banyak_beras' => 'numeric',
+            'banyak_uang' => 'numeric',
+            'banyak_pakaian_bekas' => 'required|numeric'
         ]);
 
-        return redirect('/lihatbencana');
+        return redirect('/donasi');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Logistik $logistik
+     * @param  \App\Models\Donasi  $donasi
      * @return Response
      */
-    public function show(Logistik $logistik)
+    public function show(Donasi $donasi)
     {
         //
     }
@@ -70,10 +64,10 @@ class LogistikController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\Logistik $logistik
+     * @param  \App\Models\Donasi  $donasi
      * @return Response
      */
-    public function edit(Logistik $logistik)
+    public function edit(Donasi $donasi)
     {
         //
     }
@@ -81,11 +75,11 @@ class LogistikController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Logistik $logistik
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Donasi  $donasi
      * @return Response
      */
-    public function update(Request $request, Logistik $logistik)
+    public function update(Request $request, Donasi $donasi)
     {
         //
     }
@@ -93,10 +87,10 @@ class LogistikController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Logistik $logistik
+     * @param  \App\Models\Donasi  $donasi
      * @return Response
      */
-    public function destroy(Logistik $logistik)
+    public function destroy(Donasi $donasi)
     {
         //
     }

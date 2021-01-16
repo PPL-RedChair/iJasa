@@ -17,7 +17,6 @@ class CatatJumlahPengungsiTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser
-                ->refresh()
                 ->visit('/catatpengungsi')
                 ->select('dropdownbencana', 'Gunung Merapi')
                 ->type('jumlah_pengungsi', '300')
@@ -42,7 +41,6 @@ class CatatJumlahPengungsiTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser
-                ->refresh()
                 ->visit('/catatpengungsi')
                 ->type('jumlah_pengungsi', '300')
                 ->type('pengungsi_dewasa', '200')
@@ -67,7 +65,6 @@ class CatatJumlahPengungsiTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser
-                ->refresh()
                 ->visit('/catatpengungsi')
                 ->select('dropdownbencana', 'Gunung Merapi')
                 ->type('pengungsi_dewasa', '200')
@@ -91,7 +88,6 @@ class CatatJumlahPengungsiTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser
-                ->refresh()
                 ->visit('/catatpengungsi')
                 ->select('dropdownbencana', 'Gunung Merapi')
                 ->type('jumlah_pengungsi', '300')

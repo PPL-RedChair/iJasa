@@ -19,15 +19,23 @@
         <select class="form-select" name="dropdownbencana" id="dropdownbencana">
             <option value="">Bencana</option>
             @foreach($bencana as $b)
-                <option value="{{ $b->id }}">{{ $b->nama_bencana }}</option>
+                <option value="{{ $b->nama_bencana }}">{{ $b->nama_bencana }}</option>
             @endforeach
         </select>
     </div>
+
+    @error('dropdownbencana')
+    <div class="alert-danger">{{ $message }}</div>
+    @enderror
 
     <label for="jumlah_pengungsi" class="form-label">Jumlah Pengungsi</label>
     <div class="input-group mb-3">
         <input type="text" name="jumlah_pengungsi" id="jumlah_pengungsi">
     </div>
+
+    @error('jumlah_pengungsi')
+    <div class="alert-danger">{{ $message }}</div>
+    @enderror
 
 
     <div class="input-group mb-3">
@@ -57,11 +65,23 @@
         <label for="banyak_selimut" class="form-label">Selimut</label>
         <input type="text" name="banyak_selimut" id="banyak_selimut">
 
+        @error('banyak_selimut')
+        <div class="alert-danger">{{ $message }}</div>
+        @enderror
+
         <label for="banyak_beras" class="form-label">Beras</label>
         <input type="text" name="banyak_beras" id="banyak_beras">
 
+        @error('banyak_beras')
+        <div class="alert-danger">{{ $message }}</div>
+        @enderror
+
         <label for="banyak_masker" class="form-label">Masker</label>
         <input type="text" name="banyak_masker" id="banyak_masker">
+
+        @error('banyak_masker')
+        <div class="alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 
 
@@ -69,18 +89,29 @@
         <label for="banyak_gandum" class="form-label">Gandum</label>
         <input type="text" name="banyak_gandum" id="banyak_gandum">
 
+        @error('banyak_gandum')
+        <div class="alert-danger">{{ $message }}</div>
+        @enderror
+
         <label for="banyak_mie" class="form-label">Mie</label>
         <input type="text" name="banyak_mie" id="banyak_mie">
 
+        @error('banyak_mie')
+        <div class="alert-danger">{{ $message }}</div>
+        @enderror
+
         <label for="banyak_kasur" class="form-label">Kasur</label>
         <input type="text" name="banyak_kasur" id="banyak_kasur">
+
+        @error('banyak_kasur')
+        <div class="alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <label for="kebutuhan_lain" class="form-label">Kebutuhan Lain</label>
     <div class="input-group mb-3">
         <input type="text" name="kebutuhan_lain" id="kebutuhan_lain">
     </div>
-
     <button type="submit">SIMPAN</button>
 
 
