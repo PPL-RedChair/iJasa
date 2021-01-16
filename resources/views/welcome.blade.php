@@ -105,6 +105,25 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg leading-7 font-semibold">
+                                <a href="{{ route('rincian-show') }}"
+                                   class="underline text-gray-900 dark:text-white">Rincian Distribusi</a>
+                            </div>
+                        </div>
+
+                        <div class="ml-12">
+                            <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

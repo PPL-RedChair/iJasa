@@ -17,4 +17,9 @@ class Bencana extends Model
     {
         return $this->belongsTo(JenisBencana::class, 'jenis_bencana_id');
     }
+
+    public function logistik()
+    {
+        return $this->hasOne(Logistik::class);
+    }
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\BencanaController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\KelolaLogistikController;
 use App\Http\Controllers\LogistikController;
+use App\Http\Controllers\RincianDistribusiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +40,5 @@ Route::post('rencanadonasi', [DonasiController::class, 'store'])->name('donasi-s
 
 Route::get('/tambahkejadianbencana', [BencanaController::class, 'create'])->name('bencana-create');
 Route::post('/tambahkejadianbencana', [BencanaController::class, 'store'])->name('bencana-store');
+
+Route::get('/rinciandistribusi', [RincianDistribusiController::class, 'show'])->name('rincian-show');
