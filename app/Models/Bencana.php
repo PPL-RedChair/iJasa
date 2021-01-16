@@ -11,6 +11,8 @@ class Bencana extends Model
 
     protected $table = 'bencana';
 
+    protected $guarded = [];
+
     public function jenis_bencana()
     {
         return $this->belongsTo(JenisBencana::class, 'jenis_bencana_id');

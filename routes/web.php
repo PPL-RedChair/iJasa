@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BencanaController;
 use App\Http\Controllers\DonasiController;
+use App\Http\Controllers\KelolaLogistikController;
 use App\Http\Controllers\LogistikController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,8 @@ Route::get('/donasi', function () {
 
 Route::get('/catatpengungsi', [LogistikController::class, 'create'])->name('logistik-create');
 Route::post('/catatpengungsi', [LogistikController::class, 'store'])->name('logistik-store');
+Route::get('/kelolalogistik', [KelolaLogistikController::class, 'kelola'])->name('logistik-kelola');
+Route::post('/kelolalogistik', [KelolaLogistikController::class, 'perbarui'])->name('logistik-perbarui');
 
 Route::get('/rencanadonasi', [DonasiController::class, 'create'])->name('donasi-create');
 Route::post('rencanadonasi', [DonasiController::class, 'store'])->name('donasi-store');
