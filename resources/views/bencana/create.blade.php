@@ -18,9 +18,6 @@
     <div class="input-group mb-3">
         <input type="text" name="nama_bencana" id="nama_bencana" class="form-control">
     </div>
-    {{--    @error('banyak_uang')--}}
-    {{--    <div class="alert-danger">{{ $message }}</div>--}}
-    {{--    @enderror--}}
 
     <label for="dropdownJenisBencana" class="form-label">Jenis Bencana</label>
     <div class="input-group mb-3">
@@ -32,25 +29,16 @@
         </select>
     </div>
 
-    {{--    @error('dropdownbencana')--}}
-    {{--    <div class="alert-danger">{{ $message }}</div>--}}
-    {{--    @enderror--}}
 
     <label for="deskripsi" class="form-label">Deskripsi</label>
     <div class="input-group mb-3">
         <input type="text" name="deskripsi" id="deskripsi" class="form-control">
     </div>
-    {{--    @error('banyak_uang')--}}
-    {{--    <div class="alert-danger">{{ $message }}</div>--}}
-    {{--    @enderror--}}
 
     <div class="mb-3">
         <label for="photo" class="form-label">Foto</label>
         <input class="form-control" type="file" id="photo" name="photo">
     </div>
-    {{--    @error('banyak_pakaian_bekas')--}}
-    {{--    <div class="alert-danger">{{ $message }}</div>--}}
-    {{--    @enderror--}}
 
     <div class="mb-3">
         <strong>Pilih Kebutuhan Logistik</strong>
@@ -84,6 +72,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary">SIMPAN</button>
+    <a href="{{ route('home') }}" class="btn btn-secondary">Kembali</a>
 
     @if(session()->has('error'))
         <div class="alert alert-danger">

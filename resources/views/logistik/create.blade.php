@@ -14,9 +14,9 @@
     @csrf
     @method('POST')
 
-    <label for="dropdownbencana" class="form-label">Bencana</label>
+    <strong>Bencana</strong> </label>
     <div class="input-group mb-3">
-        <select class="form-select" name="dropdownbencana" id="dropdownbencana">
+        <select class="form-select" name="dropdownbencana" id="dropdownbencana" aria-label="">
             <option value="">Bencana</option>
             @foreach($bencana as $b)
                 <option value="{{ $b->nama_bencana }}">{{ $b->nama_bencana }}</option>
@@ -28,9 +28,9 @@
     <div class="alert-danger">{{ $message }}</div>
     @enderror
 
-    <label for="jumlah_pengungsi" class="form-label">Jumlah Pengungsi</label>
     <div class="input-group mb-3">
-        <input type="text" name="jumlah_pengungsi" id="jumlah_pengungsi">
+        <input type="text" name="jumlah_pengungsi" id="jumlah_pengungsi" class="form-control" aria-label=""
+               placeholder="Jumlah Pengungsi">
     </div>
 
     @error('jumlah_pengungsi')
@@ -39,45 +39,44 @@
 
 
     <div class="input-group mb-3">
-        <label for="pengungsi_dewasa" class="form-label">Pengungsi Dewasa</label>
-        <input type="text" name="pengungsi_dewasa" id="pengungsi_dewasa">
+        <input type="text" name="pengungsi_dewasa" id="pengungsi_dewasa" class="form-control" aria-label=""
+               placeholder="Pengungsi Dewasa">
 
-        <label for="pengungsi_anak" class="form-label">Pengungsi Anak</label>
-        <input type="text" name="pengungsi_anak" id="pengungsi_anak">
+        <input type="text" name="pengungsi_anak" id="pengungsi_anak" class="form-control" aria-label=""
+               placeholder="Pengungsi Anak">
 
-        <label for="pengungsi_lansia" class="form-label">Pengungsi Lansia</label>
-        <input type="text" name="pengungsi_lansia" id="pengungsi_lansia">
+        <input type="text" name="pengungsi_lansia" id="pengungsi_lansia" class="form-control" aria-label=""
+               placeholder="Pengungsi Lansia">
     </div>
 
 
     <div class="input-group mb-3">
-        <label for="pengungsi_bumil" class="form-label">Pengungsi Ibu Hamil</label>
-        <input type="text" name="pengungsi_bumil" id="pengungsi_bumil">
+        <input type="text" name="pengungsi_bumil" id="pengungsi_bumil" class="form-control" aria-label=""
+               placeholder="Pengungsi Ibu Hamil">
 
-        <label for="pengungsi_balita" class="form-label">Pengungsi Balita</label>
-        <input type="text" name="pengungsi_balita" id="pengungsi_balita">
+        <input type="text" name="pengungsi_balita" id="pengungsi_balita" class="form-control" aria-label=""
+               placeholder="Pengungsi Balita">
     </div>
 
-    <hr>
-
+    <strong>Kebutuhan Logistik</strong>
 
     <div class="input-group mb-3">
-        <label for="banyak_selimut" class="form-label">Selimut</label>
-        <input type="text" name="banyak_selimut" id="banyak_selimut">
+        <input type="text" name="banyak_selimut" id="banyak_selimut" class="form-control" aria-label=""
+               placeholder="Selimut">
 
         @error('banyak_selimut')
         <div class="alert-danger">{{ $message }}</div>
         @enderror
 
-        <label for="banyak_beras" class="form-label">Beras</label>
-        <input type="text" name="banyak_beras" id="banyak_beras">
+        <input type="text" name="banyak_beras" id="banyak_beras" class="form-control" aria-label=""
+               placeholder="Beras">
 
         @error('banyak_beras')
         <div class="alert-danger">{{ $message }}</div>
         @enderror
 
-        <label for="banyak_masker" class="form-label">Masker</label>
-        <input type="text" name="banyak_masker" id="banyak_masker">
+        <input type="text" name="banyak_masker" id="banyak_masker" class="form-control" aria-label=""
+               placeholder="Masker">
 
         @error('banyak_masker')
         <div class="alert-danger">{{ $message }}</div>
@@ -86,33 +85,36 @@
 
 
     <div class="input-group mb-3">
-        <label for="banyak_gandum" class="form-label">Gandum</label>
-        <input type="text" name="banyak_gandum" id="banyak_gandum">
+        <input type="text" name="banyak_gandum" id="banyak_gandum" class="form-control" aria-label=""
+               placeholder="Gandum">
 
         @error('banyak_gandum')
         <div class="alert-danger">{{ $message }}</div>
         @enderror
 
-        <label for="banyak_mie" class="form-label">Mie</label>
-        <input type="text" name="banyak_mie" id="banyak_mie">
+        <input type="text" name="banyak_mie" id="banyak_mie" class="form-control" aria-label=""
+               placeholder="Mie Instan">
 
         @error('banyak_mie')
         <div class="alert-danger">{{ $message }}</div>
         @enderror
 
-        <label for="banyak_kasur" class="form-label">Kasur</label>
-        <input type="text" name="banyak_kasur" id="banyak_kasur">
+        <input type="text" name="banyak_kasur" id="banyak_kasur" class="form-control" aria-label=""
+               placeholder="Kasur">
 
         @error('banyak_kasur')
         <div class="alert-danger">{{ $message }}</div>
         @enderror
     </div>
 
-    <label for="kebutuhan_lain" class="form-label">Kebutuhan Lain</label>
     <div class="input-group mb-3">
-        <input type="text" name="kebutuhan_lain" id="kebutuhan_lain">
+        <input type="text" name="kebutuhan_lain" id="kebutuhan_lain" class="form-control" aria-label=""
+               placeholder="Kebutuhan Lain">
     </div>
-    <button type="submit">SIMPAN</button>
+
+
+    <button type="submit" class="btn btn-primary">SIMPAN</button>
+    <a href="{{ route('home') }}" class="btn btn-secondary">Kembali</a>
 
 
 </form>
