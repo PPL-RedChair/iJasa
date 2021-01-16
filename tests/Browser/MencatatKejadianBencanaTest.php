@@ -20,7 +20,7 @@ class MencatatKejadianBencanaTest extends DuskTestCase
                 ->type('nama_bencana', 'Gempa Bumi Sulbar')
                 ->select('dropdownJenisBencana', '2')
                 ->type('deskripsi', 'Kejadian gempa bumi sulbar tahun 2021, merusak 230 pemukiman warga.')
-                ->attach('photo', storage_path('app/public/895978.jpg'))
+                ->attach('photo', storage_path('app/public/placeholder-1.png'))
                 ->check('checkboxLogistik[]')
                 ->press('SIMPAN')
                 ->assertSee('Selamat! Kejadian anda telah direkam!');
@@ -33,7 +33,7 @@ class MencatatKejadianBencanaTest extends DuskTestCase
             $browser->visit('/tambahkejadianbencana')
                 ->type('nama_bencana', 'Gempa Bumi Sulbar')
                 ->select('dropdownJenisBencana', 'Gempa Bumi')
-                ->attach('photo', storage_path('app/public/895978.jpg'))
+                ->attach('photo', storage_path('app/public/placeholder-1.png'))
                 ->check('checkboxLogistik[]')
                 ->press('SIMPAN')
                 ->assertSee('Rekaman anda gagal! Silahkan isi dengan benar dan pastikan tidak ada yang kosong!');
