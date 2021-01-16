@@ -15,9 +15,12 @@ class CreateBencanaTable extends Migration
     {
         Schema::create('bencana', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_benana')->nullable();
-            $table->string('lokasi_bencana')->nullable();
-            $table->string('deskripsi')->nullable();
+            $table->unsignedBigInteger('jenis_bencana_id')->nullable();
+            $table->foreign('jenis_bencana_id')->references('id')->on('jenis_bencana');
+
+            $table->string('nama_bencana')->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BencanaController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\LogistikController;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,6 @@ Route::post('/catatpengungsi', [LogistikController::class, 'store'])->name('logi
 
 Route::get('/rencanadonasi', [DonasiController::class, 'create'])->name('donasi-create');
 Route::post('rencanadonasi', [DonasiController::class, 'store'])->name('donasi-store');
+
+Route::get('/tambahkejadianbencana', [BencanaController::class, 'create'])->name('bencana-create');
+Route::post('/tambahkejadianbencana', [BencanaController::class, 'store'])->name('bencana-store');

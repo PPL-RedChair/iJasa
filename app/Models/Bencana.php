@@ -10,4 +10,9 @@ class Bencana extends Model
     use HasFactory;
 
     protected $table = 'bencana';
+
+    public function jenis_bencana()
+    {
+        return $this->belongsTo(JenisBencana::class, 'jenis_bencana_id');
+    }
 }
