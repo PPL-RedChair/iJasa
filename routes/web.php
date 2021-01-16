@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LogistikController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lihatbencana', function () {
+    return "yee";
+});
+
+Route::get('/catatpengungsi', [LogistikController::class, 'create'])->name('logistik-create');
+Route::post('/catatpengungsi', [LogistikController::class, 'store'])->name('logistik-store');
